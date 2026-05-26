@@ -1,1 +1,676 @@
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+.ajk4{
+  --bg:#0B1118;--bg2:#101822;--bg3:#151F2B;--card:#131B26;
+  --accent:#C4622A;--accent-dim:rgba(196,98,42,0.12);--accent-border:rgba(196,98,42,0.30);--accent-text:#D97B3A;
+  --text:#E8EAF0;--muted:#7B8594;--muted2:#5A6370;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.10);
+  --red:#D44040;--red-dim:rgba(212,64,64,0.10);--red-border:rgba(212,64,64,0.25);
+  --gold:#D4A84B;--gold-dim:rgba(212,168,75,0.10);--gold-border:rgba(212,168,75,0.22);
+  --yellow:#C4B24B;--yellow-dim:rgba(196,178,75,0.10);--yellow-border:rgba(196,178,75,0.22);
+  --purple:#8B6CF0;--purple-dim:rgba(139,108,240,0.10);--purple-border:rgba(139,108,240,0.22);
+  --blue:#4A9FFF;--blue-dim:rgba(74,159,255,0.10);--blue-border:rgba(74,159,255,0.20);
+  --teal:#2C9E8F;--teal-dim:rgba(44,158,143,0.10);--teal-border:rgba(44,158,143,0.22);--teal-text:#3DC4B2;
+  --green:#3A9E5F;--green-dim:rgba(58,158,95,0.12);--green-border:rgba(58,158,95,0.28);--green-text:#4DC47A;
+  background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;line-height:1.7;font-weight:400;
+}
+.ajk4 *,.ajk4 *::before,.ajk4 *::after{box-sizing:border-box;margin:0;padding:0;}
+.ajk4 h1,.ajk4 h2,.ajk4 h3,.ajk4 h4{font-family:'Barlow Condensed',system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em;}
+.ajk4 .w{padding:60px 1.25rem;}
+.ajk4 .c{max-width:1060px;margin:0 auto;}
+.ajk4 .alt{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.ajk4 .foot{background:var(--bg2);border-top:1px solid var(--border);padding:1.5rem;text-align:center;color:var(--muted2);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;}
+/* HERO */
+.ajk4 .hero{padding:64px 1.25rem 52px;background:linear-gradient(160deg,var(--bg2) 0%,var(--bg) 100%);border-bottom:1px solid var(--border);text-align:center;}
+.ajk4 .hbadge{display:inline-block;border:1px solid var(--gold-border);color:var(--gold);font-size:.58rem;font-weight:700;padding:.25rem .85rem;border-radius:4px;margin-bottom:1.25rem;letter-spacing:.14em;text-transform:uppercase;background:var(--gold-dim);}
+.ajk4 h1{font-size:clamp(1.8rem,6vw,3.4rem);font-weight:900;line-height:1.0;max-width:820px;margin:0 auto .75rem;}
+.ajk4 h1 span{color:var(--accent-text);}
+.ajk4 .hsub{font-size:.88rem;color:var(--muted);max-width:580px;margin:0 auto 2rem;font-weight:300;line-height:1.7;}
+.ajk4 .pills{display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem;}
+.ajk4 .p{font-size:.68rem;color:var(--muted);background:var(--card);border:1px solid var(--border2);border-radius:4px;padding:.22rem .65rem;font-weight:400;display:inline-block;}
+.ajk4 .p strong{color:var(--text);font-weight:600;}
+.ajk4 .p-acc{border-color:var(--accent-border);background:var(--accent-dim);color:var(--accent-text);}
+.ajk4 .p-gold{border-color:var(--gold-border);background:var(--gold-dim);color:var(--gold);}
+.ajk4 .p-green{border-color:var(--green-border);background:var(--green-dim);color:var(--green-text);}
+.ajk4 .p-teal{border-color:var(--teal-border);background:var(--teal-dim);color:var(--teal-text);}
+/* NUMBERS */
+.ajk4 .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.ajk4 .ni{background:var(--card);padding:1rem .6rem;text-align:center;}
+.ajk4 .nv{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.2rem,3vw,1.8rem);font-weight:800;color:var(--accent-text);}
+.ajk4 .nl{font-size:.55rem;color:var(--muted);margin-top:.2rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600;}
+/* SEC HEAD */
+.ajk4 .sh{margin-bottom:1.75rem;}
+.ajk4 .sl{display:inline-flex;align-items:center;gap:.4rem;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;}
+.ajk4 .sl::before{content:'';width:18px;height:2px;background:var(--gold);}
+.ajk4 h2{font-size:clamp(1.3rem,3.5vw,2.2rem);font-weight:800;line-height:1.05;margin-bottom:.35rem;}
+.ajk4 h2 span{color:var(--accent-text);}
+.ajk4 h2 em{color:var(--gold);font-style:normal;}
+.ajk4 .sd{color:var(--muted);font-size:.82rem;max-width:560px;font-weight:300;}
+/* CARD */
+.ajk4 .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:.65rem;transition:border-color .2s;}
+.ajk4 .card:hover{border-color:var(--border2);}
+.ajk4 .card:last-child{margin-bottom:0;}
+.ajk4 .card h3{font-size:1rem;font-weight:700;margin-bottom:.45rem;}
+.ajk4 .bt{font-size:.82rem;color:var(--muted);line-height:1.75;font-weight:300;}
+.ajk4 .bt strong{color:var(--text);font-weight:600;}
+/* GRIDS */
+.ajk4 .g2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.ajk4 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;}
+.ajk4 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;}
+/* DETAIL */
+.ajk4 .dg{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-top:.75rem;}
+.ajk4 .di{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:.75rem .9rem;}
+.ajk4 .dl{font-size:.55rem;color:var(--accent-text);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:.2rem;}
+.ajk4 .dv{font-size:.8rem;color:var(--text);font-weight:500;}
+/* ITEMS */
+.ajk4 .it{border-left:3px solid var(--accent);background:rgba(196,98,42,0.04);border-radius:0 6px 6px 0;padding:.5rem .75rem;margin-top:.4rem;}
+.ajk4 .it.gold{border-left-color:var(--gold);background:rgba(212,168,75,0.04);}
+.ajk4 .it.teal{border-left-color:var(--teal);background:rgba(44,158,143,0.04);}
+.ajk4 .it.green{border-left-color:var(--green);background:rgba(58,158,95,0.05);}
+.ajk4 .it.red{border-left-color:var(--red);background:rgba(212,64,64,0.04);}
+.ajk4 .it.blue{border-left-color:var(--blue);background:rgba(74,159,255,0.04);}
+.ajk4 .it.purple{border-left-color:var(--purple);background:rgba(139,108,240,0.04);}
+.ajk4 .it-t{font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:.08rem;}
+.ajk4 .it-d{font-size:.7rem;color:var(--muted);line-height:1.5;font-weight:300;}
+/* NOTES */
+.ajk4 .note{background:var(--gold-dim);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:.55rem .8rem;font-size:.72rem;color:#C4A04B;line-height:1.5;margin-top:.55rem;font-weight:400;}
+.ajk4 .note.warn{background:var(--red-dim);border-left-color:var(--red);color:#D46060;}
+.ajk4 .note.info{background:var(--teal-dim);border-left-color:var(--teal);color:var(--teal-text);}
+.ajk4 .note.ok{background:var(--green-dim);border-left-color:var(--green);color:var(--green-text);}
+.ajk4 .note strong{font-weight:700;}
+/* PERSONAS */
+.ajk4 .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.65rem;}
+.ajk4 .persona{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem;transition:border-color .2s;}
+.ajk4 .persona:hover{border-color:var(--border2);}
+.ajk4 .pnum{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.25rem;}
+.ajk4 .pname{font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.03em;margin-bottom:.2rem;}
+.ajk4 .pdesc{font-size:.7rem;color:var(--muted);line-height:1.5;font-weight:300;margin-bottom:.3rem;}
+.ajk4 .ptrig{font-size:.64rem;color:var(--accent-text);font-weight:600;font-style:italic;margin-top:.3rem;}
+.ajk4 .pf{margin-top:.3rem;border-top:1px solid var(--border);padding-top:.3rem;}
+.ajk4 .pfl{font-size:.54rem;color:var(--accent-text);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.08rem;}
+.ajk4 .pfv{font-size:.68rem;color:var(--muted);line-height:1.45;font-weight:300;}
+/* COMP TABLE */
+.ajk4 .comp-table{width:100%;border-collapse:collapse;font-size:.73rem;margin-top:.75rem;}
+.ajk4 .comp-table th{text-align:left;color:var(--text);font-family:'Barlow Condensed',sans-serif;font-weight:700;padding:.5rem .6rem;border-bottom:2px solid var(--accent);font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;background:var(--bg);}
+.ajk4 .comp-table td{padding:.55rem .6rem;border-bottom:1px solid var(--border);color:var(--muted);font-weight:300;vertical-align:top;line-height:1.5;}
+.ajk4 .comp-table td:first-child{color:var(--text);font-weight:600;font-size:.76rem;white-space:nowrap;}
+.ajk4 .comp-table tr:hover td{background:rgba(255,255,255,0.02);}
+.ajk4 .comp-table .gap-row td{color:var(--accent-text);font-weight:500;}
+.ajk4 .comp-table .gap-row td:first-child{color:var(--accent-text);}
+/* PRODUTOS */
+.ajk4 .prodgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:.65rem;margin-top:.75rem;}
+.ajk4 .prod{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem;position:relative;}
+.ajk4 .prod.priority{border-color:var(--green-border);background:rgba(58,158,95,0.03);}
+.ajk4 .pbadge{position:absolute;top:.6rem;right:.6rem;font-size:.5rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:var(--green-dim);color:var(--green-text);border:1px solid var(--green-border);border-radius:3px;padding:.1rem .4rem;}
+.ajk4 .pcat{font-size:.54rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted2);margin-bottom:.25rem;}
+.ajk4 .prodname{font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.03em;margin-bottom:.2rem;line-height:1.2;}
+.ajk4 .proddesc{font-size:.68rem;color:var(--muted);line-height:1.45;font-weight:300;}
+.ajk4 .prodtag{font-size:.62rem;color:var(--accent-text);font-weight:700;margin-top:.35rem;text-transform:uppercase;letter-spacing:.04em;}
+/* BIO BLOCK */
+.ajk4 .bio{background:var(--bg);border:1px solid var(--accent-border);border-radius:8px;padding:1.5rem;margin:.75rem 0;text-align:center;}
+.ajk4 .bio-t{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1rem,2.5vw,1.4rem);font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.04em;line-height:1.3;}
+.ajk4 .bio-t span{color:var(--accent-text);}
+/* PALETTE */
+.ajk4 .palette{display:flex;gap:6px;margin:.85rem 0;}
+.ajk4 .sww{flex:1;text-align:center;}
+.ajk4 .sw{height:52px;border-radius:6px;margin-bottom:.35rem;}
+.ajk4 .swn{font-size:.6rem;font-weight:700;color:var(--text);margin-bottom:1px;}
+.ajk4 .swh{font-size:.58rem;color:var(--muted);font-family:monospace;}
+.ajk4 .swr{font-size:.55rem;color:var(--muted2);line-height:1.35;margin-top:2px;}
+/* TYPO DEMO */
+.ajk4 .tdemo{background:#1F1A16;border-radius:8px;padding:1.5rem;margin:.75rem 0;border:1px solid rgba(196,98,42,0.15);}
+.ajk4 .teye{font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#9E7A58;margin-bottom:.3rem;}
+.ajk4 .th{font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:700;color:#F0E6D3;font-family:Georgia,serif;line-height:1.2;margin-bottom:.35rem;}
+.ajk4 .th span{color:#C4622A;}
+.ajk4 .trule{width:28px;height:2px;background:#C4622A;margin:.4rem 0;}
+.ajk4 .tb2{font-size:.78rem;color:#9E7A58;line-height:1.6;}
+.ajk4 .ttag{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C4622A;border:0.5px solid rgba(196,98,42,0.4);border-radius:3px;padding:2px 7px;margin-top:.6rem;}
+/* COMPARE */
+.ajk4 .crow{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin:.75rem 0;}
+.ajk4 .cmp{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem;}
+.ajk4 .cml{font-size:.54rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem;}
+.ajk4 .cmp-bad .cml{color:var(--red);}
+.ajk4 .cmp-ok .cml{color:var(--green-text);}
+.ajk4 .cmtxt{font-size:.74rem;color:var(--muted);line-height:1.5;font-weight:300;}
+/* PLATFORM CARDS — simplified */
+.ajk4 .platgrid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.75rem;}
+.ajk4 .plat{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.25rem;transition:border-color .2s;}
+.ajk4 .plat:hover{border-color:var(--border2);}
+.ajk4 .plat-head{display:flex;align-items:center;gap:10px;margin-bottom:.85rem;}
+.ajk4 .plat-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;font-family:'Barlow Condensed',sans-serif;flex-shrink:0;letter-spacing:.04em;}
+.ajk4 .plat-name{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text);margin-bottom:1px;}
+.ajk4 .plat-role{font-size:.68rem;color:var(--muted);font-style:italic;}
+.ajk4 .plat-what{font-size:.74rem;color:var(--muted);line-height:1.65;font-weight:300;}
+.ajk4 .plat-what strong{color:var(--text);font-weight:600;}
+.ajk4 .plat-tag{display:inline-block;font-size:.56rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;padding:.1rem .45rem;margin-top:.65rem;}
+/* MOTOR CENTRAL */
+.ajk4 .motor{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin-bottom:1rem;}
+.ajk4 .motor-flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:.75rem 0;}
+.ajk4 .motor-box{background:var(--card);border:1px solid var(--border2);border-radius:6px;padding:.3rem .65rem;font-size:.68rem;color:var(--text);font-weight:500;white-space:nowrap;}
+.ajk4 .motor-arrow{font-size:.8rem;color:var(--muted2);}
+
+@media(max-width:768px){.ajk4 .platgrid{grid-template-columns:1fr;}}
+@media(max-width:600px){
+  .ajk4 .g2,.ajk4 .g3,.ajk4 .g4{grid-template-columns:1fr;}
+  .ajk4 .crow{grid-template-columns:1fr;}
+  .ajk4 .palette{flex-wrap:wrap;}
+  .ajk4 .sww{min-width:80px;}
+  .ajk4 .pgrid{grid-template-columns:1fr;}
+  .ajk4 .dg{grid-template-columns:1fr;}
+  .ajk4 .motor-flow{gap:4px;}
+}
+@media(max-width:520px){
+  .ajk4 .w{padding:40px .85rem;}
+  .ajk4 .hero{padding:40px .85rem 35px;}
+  .ajk4 h1{font-size:1.65rem;}
+  .ajk4 h2{font-size:1.2rem;}
+  .ajk4 .hsub{font-size:.8rem;margin-bottom:1.5rem;}
+  .ajk4 .card{padding:1.1rem .9rem;}
+  .ajk4 .card h3{font-size:.92rem;}
+  .ajk4 .nums{grid-template-columns:repeat(3,1fr);}
+  .ajk4 .ni{padding:.75rem .5rem;}
+  .ajk4 .nv{font-size:1.15rem;}
+  .ajk4 .nl{font-size:.5rem;}
+  .ajk4 .bt{font-size:.78rem;}
+  .ajk4 .note{font-size:.68rem;}
+}
+@media(max-width:380px){
+  .ajk4 .w{padding:32px .75rem;}
+  .ajk4 .hero{padding:32px .75rem 28px;}
+  .ajk4 h1{font-size:1.45rem;}
+  .ajk4 .nums{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+
+<div class="ajk4">
+
+<!-- HERO -->
+<div class="hero"><div class="c">
+  <div class="hbadge">Instituto Propósito · Conceito e Posicionamento Digital</div>
+  <h1>Ideia, Conceito e <span>Direção</span></h1>
+  <p class="hsub">Diagnóstico de mercado, mapa de produtos, posicionamento, visão de plataformas e proposta de identidade visual — o ponto de partida antes da estratégia.</p>
+  <div class="pills">
+    <span class="p"><strong>Fase:</strong> Conceito inicial</span>
+    <span class="p p-green"><strong>Prioridade:</strong> Presencial JR e CHA</span>
+    <span class="p p-gold"><strong>Foco:</strong> Orgânico</span>
+    <span class="p"><strong>Maio 2026</strong></span>
+  </div>
+</div></div>
+
+<!-- NUMBERS -->
+<div class="w"><div class="c">
+  <div class="nums">
+    <div class="ni"><div class="nv">8</div><div class="nl">Produtos ativos</div></div>
+    <div class="ni"><div class="nv">5</div><div class="nl">Plataformas digitais</div></div>
+    <div class="ni"><div class="nv">4</div><div class="nl">Tipos de palestra</div></div>
+    <div class="ni"><div class="nv">5</div><div class="nl">Personas mapeadas</div></div>
+    <div class="ni"><div class="nv">1</div><div class="nl">Gravação → 5 canais</div></div>
+    <div class="ni"><div class="nv">Gap</div><div class="nl">Real no mercado</div></div>
+  </div>
+</div></div>
+
+<!-- 1. SITUAÇÃO -->
+<div class="w alt"><div class="c">
+  <div class="sh">
+    <div class="sl">01 · Situação atual</div>
+    <h2>Ponto de partida — <span>o que existe hoje</span></h2>
+    <p class="sd">Ativos reais, diagnóstico honesto e a oportunidade que o mercado ainda não ocupa.</p>
+  </div>
+  <div class="g2">
+    <div>
+      <div class="card">
+        <h3>Quem são</h3>
+        <p class="bt">Júnior e Charlana Kaufmann — casal, empreendedores, pais de três filhos. Fundadores do Instituto Propósito com trajetória consolidada em desenvolvimento humano. Perfis comportamentais opostos e valores idênticos: Júnior mais comunicativo no palco, Charlana mais estruturada na gestão e no relacional corporativo. Essa combinação é o ativo mais autêntico do Instituto.</p>
+        <div class="bio" style="margin-top:.75rem">
+          <div class="bio-t">TE AJUDO A CONCILIAR <span>FAMÍLIA, NEGÓCIOS</span> E PROPÓSITO.<br>ESCALE CARREIRA E NEGÓCIOS SEM <span>FALIR SEU CASAMENTO.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>O que já existe e funciona</h3>
+        <div class="it green" style="margin-top:0">
+          <div class="it-t">A Grande Catarse — transformação profunda comprovada</div>
+          <div class="it-d">Depoimentos consistentes: "pagaria dez vezes mais". Prova social genuína. O desafio não é a entrega — é a venda e a porta de entrada.</div>
+        </div>
+        <div class="it green">
+          <div class="it-t">GAPE — já na 5ª edição, cresceu por indicação</div>
+          <div class="it-d">Produto derivado que participantes avaliam como superior ao de origem. Valida o método e a demanda por mais.</div>
+        </div>
+        <div class="it green">
+          <div class="it-t">4 palestras com públicos distintos mapeadas</div>
+          <div class="it-d">Família e Carreira (B2C), Lidar com Gente (CDLs), Viver de Propósito (empresas/escolas), Vendas (empresas). Portfólio diversificado.</div>
+        </div>
+        <div class="it green">
+          <div class="it-t">Fotos de estúdio com qualidade técnica real</div>
+          <div class="it-d">Iluminação profissional, nitidez e profundidade de campo. O problema não é a foto — é o design sobreposto: textos inclinados e paleta que compete com a imagem.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>O que precisa mudar</h3>
+        <div class="it red" style="margin-top:0">
+          <div class="it-t">Identidade visual genérica</div>
+          <div class="it-d">Azul royal + amarelo + caixas tortas comunicam "template". Contradiz o posicionamento de autoridade — quem promete organizar a vida do público não pode ter um feed que parece desorganizado.</div>
+        </div>
+        <div class="it red">
+          <div class="it-t">Conteúdo sem fio condutor</div>
+          <div class="it-d">Posts sobre tudo sem tema central. No Instagram as pessoas seguem quem fala de um assunto específico — misturar dilui o motivo de seguir.</div>
+        </div>
+        <div class="it red">
+          <div class="it-t">Funil digital inexistente</div>
+          <div class="it-d">O site atual é um checkout para quem já está convencido. Não aquece, não qualifica e não guia quem chega frio.</div>
+        </div>
+        <div class="it red">
+          <div class="it-t">Presença digital abaixo do potencial</div>
+          <div class="it-d">O Instituto tem conteúdo e prova social genuína — falta o sistema de distribuição para fazer esse ativo chegar em quem precisa.</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>A oportunidade</h3>
+        <p class="bt" style="margin-bottom:.65rem">Uma parcela crescente de profissionais entre 30 e 50 anos vive sob pressão de um modelo que coloca carreira e família como projetos concorrentes. A pergunta "ou cuido da família ou prospero nos negócios" é real e frequente nesse público.</p>
+        <p class="bt">Coaches de casamento, coaches de carreira e coaches de produtividade existem em abundância — mas cada um trabalha apenas uma parte do problema. <strong>Ninguém com audiência relevante trabalha o sistema inteiro</strong>, com casal real como prova viva de que os três coexistem.</p>
+        <div class="note ok" style="margin-top:.65rem"><strong>O diferencial que não se copia:</strong> três filhos, casal empreendedor, negócio escalando. Não é um método ensinado em slides — é uma vida que o público quer construir, e o Júnior e a Charlana já construíram.</div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<!-- 2. MERCADO -->
+<div class="w"><div class="c">
+  <div class="sh">
+    <div class="sl">02 · Pesquisa de Mercado</div>
+    <h2>Diagnóstico de <span>mercado e concorrência</span></h2>
+    <p class="sd">Tendências, comportamento do público e o gap que nenhum player relevante está ocupando.</p>
+  </div>
+  <div class="g2" style="margin-bottom:.75rem">
+    <div class="card">
+      <h3>Tendências 2025–2026</h3>
+      <div class="it" style="margin-top:0">
+        <div class="it-t">Personal branding migra para maturidade visual</div>
+        <div class="it-d">Template genérico perdeu credibilidade em nichos premium. Fundo escuro, tipografia forte e paleta quente viraram referência de autoridade.</div>
+      </div>
+      <div class="it">
+        <div class="it-t">Podcast em vídeo como hub de conteúdo</div>
+        <div class="it-d">Uma gravação alimenta YouTube, Spotify, Reels e TikTok sem custo adicional de produção — modelo adotado pelos maiores criadores do nicho.</div>
+      </div>
+      <div class="it">
+        <div class="it-t">Reação à cultura de excesso de trabalho</div>
+        <div class="it-d">A glorificação de produtividade a qualquer custo vem sendo questionada. O público não quer ser mais produtivo — quer saber se dá para ter as duas coisas.</div>
+      </div>
+      <div class="it">
+        <div class="it-t">Autenticidade supera produção</div>
+        <div class="it-d">Bastidores reais performam melhor do que posts altamente produzidos. O público reconhece performance e resiste a ela — especialmente em temas de família.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Comportamento do público</h3>
+      <p class="bt" style="margin-bottom:.65rem">O profissional entre 30 e 50 anos com família formada não busca mais técnica de produtividade — já tentou isso. Busca um modelo. Alguém que prove que dá para ter família sólida, negócios crescendo e vida com sentido sem escolher entre os três.</p>
+      <div class="dg" style="margin-top:0">
+        <div class="di"><div class="dl">Faixa etária</div><div class="dv">25 a 55 anos, homens e mulheres</div></div>
+        <div class="di"><div class="dl">Onde consome</div><div class="dv">Instagram, Spotify no carro, YouTube fins de semana</div></div>
+        <div class="di"><div class="dl">O que para o scroll</div><div class="dv">"Sua empresa cresce mas seu casamento está sofrendo"</div></div>
+        <div class="di"><div class="dl">Tempo de decisão</div><div class="dv">Semanas a meses de aquecimento antes de qualquer compra</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Análise de concorrência</h3>
+    <p class="bt" style="margin-bottom:.75rem">Principais criadores brasileiros que tocam em temas próximos — e o espaço que nenhum deles ocupa.</p>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="comp-table">
+        <thead>
+          <tr><th>Criador</th><th>Nicho</th><th>O que faz bem</th><th>O que deixa aberto</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pablo Marçal</td>
+            <td>Empreendedorismo + homem provedor + espiritualidade</td>
+            <td>Alta energia, alcance massivo, posicionamento forte</td>
+            <td>Tom religioso/político polarizador. Não trabalha o casal — foca no homem provedor. Sem produto de transformação presencial com método.</td>
+          </tr>
+          <tr>
+            <td>Leandro Karnal</td>
+            <td>Propósito + filosofia + desenvolvimento humano</td>
+            <td>Profundidade intelectual, autoridade acadêmica, fala de sentido com sofisticação</td>
+            <td>Não trabalha família e casamento como tema central. Sem produto presencial de transformação. Público mais intelectualizado.</td>
+          </tr>
+          <tr>
+            <td>Christian Barbosa</td>
+            <td>Gestão do tempo + produtividade + equilíbrio</td>
+            <td>Método claro, linguagem corporativa acessível, credibilidade em produtividade</td>
+            <td>Foco técnico — não trabalha casamento nem família como tema emocional. Resolve o problema de agenda, não o problema de vida.</td>
+          </tr>
+          <tr>
+            <td>Nando Pinheiro</td>
+            <td>Casamento + relacionamento + fé</td>
+            <td>Fala sobre casamento com profundidade emocional, comunidade engajada</td>
+            <td>Viés religioso evangélico forte. Não conecta casamento com carreira ou negócios.</td>
+          </tr>
+          <tr>
+            <td>Camila Farani</td>
+            <td>Empreendedorismo feminino + equilíbrio carreira e vida</td>
+            <td>Conecta carreira com vida pessoal, autenticidade de quem vive o que ensina</td>
+            <td>Público feminino exclusivo. Não trabalha a dinâmica do casal empreendedor nem a família como projeto conjunto.</td>
+          </tr>
+          <tr class="gap-row">
+            <td>Instituto Propósito</td>
+            <td>Família + negócios + propósito — o sistema inteiro</td>
+            <td>Casal real com filhos e negócio escalando. Prova viva da promessa. Produto presencial com resultado comprovado.</td>
+            <td>— Território aberto. Nenhum player ocupa esse espaço com autenticidade de casal.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note ok" style="margin-top:.75rem"><strong>O gap real:</strong> nenhum criador brasileiro relevante trabalha família + carreira + propósito com um casal real como prova viva, sem viés religioso exclusivista e sem foco só feminino. Esse território está aberto.</div>
+  </div>
+</div></div>
+
+<!-- 3. PERSONAS -->
+<div class="w alt"><div class="c">
+  <div class="sh">
+    <div class="sl">03 · Público</div>
+    <h2>Personas — <span>quem o Instituto Propósito atende</span></h2>
+    <p class="sd">Cinco perfis com motivações distintas — todos convergindo para o mesmo núcleo: construir uma vida que faça sentido.</p>
+  </div>
+  <div class="pgrid">
+    <div class="persona">
+      <div class="pnum">Persona 01 · Central</div>
+      <div class="pname">O Empresário Culpado</div>
+      <div class="pdesc">Homem, 32–48 anos. Empresa indo bem, casamento sofrendo. Sente a tensão entre crescer profissionalmente e estar presente para a família. Já tentou produtividade e organização. Nada resolveu porque o problema não é técnico.</div>
+      <div class="ptrig">"Sua empresa está crescendo. Seu casamento também?"</div>
+      <div class="pf"><div class="pfl">Produto de entrada</div><div class="pfv">Presencial JR e CHA ou palestra Família e Carreira Juntos</div></div>
+    </div>
+    <div class="persona">
+      <div class="pnum">Persona 02 · Central</div>
+      <div class="pname">A Profissional que Quer Tudo</div>
+      <div class="pdesc">Mulher, 28–44 anos. Carreira em ascensão, família formada. Sente que precisa escolher entre ser boa mãe, boa profissional e boa esposa. Busca referência real de que as três coisas coexistem.</div>
+      <div class="ptrig">"Dá para ser mãe presente, empreendedora e ter um casamento que funciona?"</div>
+      <div class="pf"><div class="pfl">Produto de entrada</div><div class="pfv">Conteúdo da Charlana quando ativo + Plataforma Propósito</div></div>
+    </div>
+    <div class="persona">
+      <div class="pnum">Persona 03</div>
+      <div class="pname">O Casal em Construção</div>
+      <div class="pdesc">Casal jovem, 26–38 anos. Casados ou noivos, começando a empreender. A rotina está consumindo o relacionamento antes mesmo de ter filhos. Seguem o Júnior e a Charlana como modelo do que querem ser.</div>
+      <div class="ptrig">"Como vocês conseguem dar conta de tudo isso juntos?"</div>
+      <div class="pf"><div class="pfl">Produto de entrada</div><div class="pfv">Plataforma Propósito — acesso gradual e contínuo</div></div>
+    </div>
+    <div class="persona">
+      <div class="pnum">Persona 04</div>
+      <div class="pname">O Gestor que Quer Reter</div>
+      <div class="pdesc">Gestor ou dono de empresa, 35–55 anos. Equipe com alta rotatividade, colaboradores sobrecarregados. Busca desenvolvimento humano para contratar como palestra ou workshop — quer resultado em engajamento e retenção.</div>
+      <div class="ptrig">"Preciso de algo que desenvolva minha equipe como pessoas, não só como profissionais."</div>
+      <div class="pf"><div class="pfl">Canal de chegada</div><div class="pfv">LinkedIn + indicação de RH + CDLs</div></div>
+    </div>
+    <div class="persona">
+      <div class="pnum">Persona 05</div>
+      <div class="pname">Quem Já Está em Crise</div>
+      <div class="pdesc">Homem ou mulher, 35–50 anos. Casamento em ponto crítico, não está buscando conteúdo de crescimento — está buscando saída. Chega pelo depoimento de alguém próximo que fez A Grande Catarse.</div>
+      <div class="ptrig">"Meu casamento está acabando e eu não sei o que fazer."</div>
+      <div class="pf"><div class="pfl">Como chega</div><div class="pfv">Indicação direta — não pelo funil digital</div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- 4. PRODUTOS -->
+<div class="w"><div class="c">
+  <div class="sh">
+    <div class="sl">04 · Ecossistema de Produtos</div>
+    <h2>Mapa completo com <span>hierarquia real</span></h2>
+    <p class="sd">Todos os produtos do Instituto Propósito com a prioridade definida. Itens com * aguardam validação de valores e formatos exatos.</p>
+  </div>
+  <div class="note" style="margin-bottom:1rem"><strong>Prioridade definida:</strong> o Presencial JR e CHA é o destino central de todo o posicionamento digital. A plataforma é mid-funnel de nutrição. A Grande Catarse e o GAPE são produtos de profundidade, fechados no processo consultivo.</div>
+  <div class="prodgrid">
+    <div class="prod priority">
+      <div class="pbadge">Prioridade</div>
+      <div class="pcat">Evento presencial</div>
+      <div class="prodname">Presencial JR e CHA</div>
+      <div class="proddesc">Ministrado pelo casal. Foco em constituir e liderar uma família com propósito enquanto constrói negócios. Formato e ticket a definir*. Dois a três eventos por ano.</div>
+      <div class="prodtag">Destino central do posicionamento</div>
+    </div>
+    <div class="prod">
+      <div class="pcat">Transformação profunda</div>
+      <div class="prodname">A Grande Catarse</div>
+      <div class="proddesc">Treinamento presencial intensivo. Depoimentos: "pagaria 10x mais". Venda exclusivamente via processo consultivo — não fecha pelo digital.*</div>
+      <div class="prodtag">Closer WhatsApp — alto ticket*</div>
+    </div>
+    <div class="prod">
+      <div class="pcat">Evento derivado</div>
+      <div class="prodname">GAPE</div>
+      <div class="proddesc">Evento presencial derivado da Grande Catarse. 5ª edição. Cresceu por indicação orgânica. Participantes avaliam como experiência superior.*</div>
+      <div class="prodtag">Indicação + audiência aquecida</div>
+    </div>
+    <div class="prod">
+      <div class="pcat">Recorrência digital</div>
+      <div class="prodname">Plataforma Propósito</div>
+      <div class="proddesc">Assinatura mensal com módulos: relacionamento, filhos, educação financeira, organização do tempo, empreendedorismo. Porta de entrada acessível. Afiliados Hotmart.</div>
+      <div class="prodtag">R$ 37–47/mês · Hotmart</div>
+    </div>
+    <div class="prod">
+      <div class="pcat">Alta personalização</div>
+      <div class="prodname">Mentoria Individual</div>
+      <div class="proddesc">Acompanhamento personalizado. Agenda restrita. Para quem passou pelo presencial e quer continuidade de profundidade.*</div>
+      <div class="prodtag">Saída do funil — agenda limitada*</div>
+    </div>
+    <div class="prod">
+      <div class="pcat">Corporativo B2B</div>
+      <div class="prodname">Workshop Liderança NR-1</div>
+      <div class="proddesc">Workshop corporativo. Contratação direta por empresas e setores industriais. Canal B2B independente.*</div>
+      <div class="prodtag">Contratação direta*</div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:.75rem">
+    <h3>4 Palestras — públicos e canais</h3>
+    <div class="g4" style="margin-top:.65rem">
+      <div class="di"><div class="dl">Família e Carreira Juntos</div><div class="dv" style="font-size:.74rem">B2C. Júnior e Charlana juntos. Entrada direta para o Presencial.</div></div>
+      <div class="di"><div class="dl">Lidar com Gente</div><div class="dv" style="font-size:.74rem">Corporativo / CDLs. Liderança e gestão com foco humano.</div></div>
+      <div class="di"><div class="dl">Viver de Propósito</div><div class="dv" style="font-size:.74rem">Empresas e escolas. Inteligência emocional e propósito.</div></div>
+      <div class="di"><div class="dl">Vendas</div><div class="dv" style="font-size:.74rem">Empresas. Venda com propósito — diferente do posicionamento de alta pressão.</div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- 5. PLATAFORMAS -->
+<div class="w alt"><div class="c">
+  <div class="sh">
+    <div class="sl">05 · Plataformas Digitais</div>
+    <h2>Onde atuar e <span>como cada canal funciona</span></h2>
+    <p class="sd">Cada plataforma tem um papel e um público diferente dentro da mesma marca. Entender essa distinção é o que evita desperdiçar energia postando a mesma coisa em todo lugar.</p>
+  </div>
+
+  <div class="motor">
+    <p class="bt"><strong>O princípio central:</strong> o podcast filmado em vídeo é o único conteúdo criado do zero. Tudo o mais é derivado — o mesmo material rende presença em cinco plataformas sem multiplicar a produção.</p>
+    <div class="motor-flow">
+      <div class="motor-box">Podcast gravado em vídeo</div>
+      <div class="motor-arrow">→</div>
+      <div class="motor-box">YouTube (íntegra)</div>
+      <div class="motor-arrow">→</div>
+      <div class="motor-box">Spotify (áudio)</div>
+      <div class="motor-arrow">→</div>
+      <div class="motor-box">Reels + TikTok (cortes)</div>
+      <div class="motor-arrow">→</div>
+      <div class="motor-box">Carrossel Instagram</div>
+    </div>
+  </div>
+
+  <div class="platgrid">
+    <div class="plat">
+      <div class="plat-head">
+        <div class="plat-icon" style="background:var(--accent-dim);color:var(--accent-text);border:1px solid var(--accent-border);">IG</div>
+        <div>
+          <div class="plat-name">Instagram</div>
+          <div class="plat-role">O hub central — onde tudo começa e converge</div>
+        </div>
+      </div>
+      <div class="plat-what">É a plataforma principal do posicionamento. Funciona em dois registros distintos: o <strong>feed</strong>, que é curado e comunica autoridade — identidade visual forte, conteúdo com profundidade, a "vitrine" da marca — e os <strong>stories</strong>, que são crus e humanos, mostram o dia a dia real, os filhos, a rotina do casal sem produção. O contraste entre os dois é intencional: feed convida, stories aproxima.</div>
+      <span class="plat-tag" style="background:var(--accent-dim);color:var(--accent-text);border:1px solid var(--accent-border);">Descoberta · Aquecimento · Conversão</span>
+    </div>
+
+    <div class="plat">
+      <div class="plat-head">
+        <div class="plat-icon" style="background:var(--purple-dim);color:var(--purple);border:1px solid var(--purple-border);">TT</div>
+        <div>
+          <div class="plat-name">TikTok</div>
+          <div class="plat-role">A varanda — onde desconhecidos encontram o Júnior</div>
+        </div>
+      </div>
+      <div class="plat-what">O único canal onde o algoritmo distribui ativamente para quem nunca ouviu falar do Instituto. Funciona com os momentos mais provocadores do podcast — frases que param o scroll de quem não acompanha. O tom aqui pode ser mais direto e polarizador do que no Instagram. <strong>O objetivo não é converter no TikTok</strong> — é fazer a pessoa ir ao Instagram. Por isso entra numa segunda fase, quando já houver material acumulado.</div>
+      <span class="plat-tag" style="background:var(--purple-dim);color:var(--purple);border:1px solid var(--purple-border);">Descoberta pura · Audiência nova</span>
+    </div>
+
+    <div class="plat">
+      <div class="plat-head">
+        <div class="plat-icon" style="background:rgba(204,0,0,0.08);color:#CC0000;border:1px solid rgba(204,0,0,0.22);">YT</div>
+        <div>
+          <div class="plat-name">YouTube</div>
+          <div class="plat-role">A biblioteca — conteúdo que não expira</div>
+        </div>
+      </div>
+      <div class="plat-what">Onde vai o podcast completo. O público que chega ao YouTube já passou pelo Instagram — está pronto para profundidade, não precisa de gancho de 3 segundos. O diferencial do conteúdo aqui são <strong>entrevistas com empresários que são ex-alunos da Grande Catarse e têm família sólida</strong> — a dupla autenticidade é o argumento mais raro e mais poderoso. Uma entrevista publicada hoje ainda aparece em busca daqui a dois anos.</div>
+      <span class="plat-tag" style="background:rgba(204,0,0,0.08);color:#CC0000;border:1px solid rgba(204,0,0,0.22);">Autoridade de longo prazo · Busca orgânica</span>
+    </div>
+
+    <div class="plat">
+      <div class="plat-head">
+        <div class="plat-icon" style="background:var(--teal-dim);color:var(--teal-text);border:1px solid var(--teal-border);">SP</div>
+        <div>
+          <div class="plat-name">Spotify</div>
+          <div class="plat-role">A cozinha — intimidade sem câmera</div>
+        </div>
+      </div>
+      <div class="plat-what">Recebe o mesmo áudio do YouTube sem custo adicional de produção. A diferença é o contexto: a pessoa ouve no carro, na academia, caminhando — o Júnior entra na rotina dela sem ela precisar parar para assistir. É o canal de maior fidelização: <strong>quem assina podcast raramente abandona</strong>. Quem chegou pelo Instagram e foi para o Spotify já está altamente qualificado para o Presencial.</div>
+      <span class="plat-tag" style="background:var(--teal-dim);color:var(--teal-text);border:1px solid var(--teal-border);">Fidelização · Intimidade · Alta qualificação</span>
+    </div>
+
+    <div class="plat" style="grid-column: span 2;">
+      <div class="plat-head">
+        <div class="plat-icon" style="background:var(--blue-dim);color:var(--blue);border:1px solid var(--blue-border);">LI</div>
+        <div>
+          <div class="plat-name">LinkedIn — Júnior</div>
+          <div class="plat-role">O escritório — canal B2B que fecha palestras corporativas diretamente</div>
+        </div>
+      </div>
+      <div class="plat-what">Opera com uma linguagem completamente diferente das outras plataformas. O público aqui está em modo profissional e decide por processo, não por impulso. O tema é o mesmo — família, propósito, equilíbrio — mas o código muda: não "falir o casamento", mas <strong>"retenção de talentos", "liderança humanizada", "bem-estar organizacional"</strong>. É o único canal que monetiza sem depender do funil de conteúdo — uma palestra corporativa fechada é receita direta e, ao mesmo tempo, uma nova audiência aquecida entrando no ecossistema.</div>
+      <span class="plat-tag" style="background:var(--blue-dim);color:var(--blue);border:1px solid var(--blue-border);">B2B direto · Palestras corporativas · Receita imediata</span>
+    </div>
+  </div>
+
+  <div class="note info" style="margin-top:.75rem"><strong>Importante:</strong> cada plataforma tem personalidade própria dentro da mesma marca. Replicar o mesmo conteúdo em todos os canais é desperdiçar o que faz cada um funcionar. A estratégia detalhada de cada canal — o que postar, com qual frequência e como medir — é o passo seguinte após a validação deste conceito.</div>
+</div></div>
+
+<!-- 6. IDENTIDADE VISUAL -->
+<div class="w"><div class="c">
+  <div class="sh">
+    <div class="sl">06 · Identidade Visual</div>
+    <h2>Conceito, paleta e <span>sistema tipográfico</span></h2>
+    <p class="sd">Uma identidade que faz a vida parecer desejável — não um anúncio de um produto que precisa ser comprado.</p>
+  </div>
+
+  <div class="g2" style="margin-bottom:.75rem">
+    <div class="card">
+      <h3>O conceito — "A Vida que Você Quer"</h3>
+      <p class="bt">Não é um slogan para o feed — é a lente de criação de tudo. Cada post, episódio e palestra deve responder antes de ser publicado: <strong>isso mostra ou ajuda alguém a construir a vida que quer?</strong></p>
+      <p class="bt" style="margin-top:.5rem">A identidade visual precisa comunicar calor humano com profundidade. A sensação de entrar na casa de alguém que já tem o que você quer construir — não de ver um pitch de vendas.</p>
+      <div class="it teal" style="margin-top:.65rem">
+        <div class="it-t">Por que não copiar a referência visual do Darlan Wilsmann</div>
+        <div class="it-d">O Darlan vende técnica de vendas com alta energia — preto + amarelo comunica isso perfeitamente para o público dele. O público do Instituto Propósito não quer ser motivado, quer ser acolhido. Copiar a estética comunicaria o produto errado para a pessoa certa.</div>
+      </div>
+      <div class="it gold" style="margin-top:.4rem">
+        <div class="it-t">Referências de universo — direção de sentimento</div>
+        <div class="it-d">Revista Monocle · Kinfolk Magazine · Marcas de relógio de legado · Fazenda de alto padrão brasileira. Nenhuma é de coach — é exatamente esse o ponto.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Tipografia — a escolha que diferencia</h3>
+      <p class="bt" style="margin-bottom:.5rem"><strong>Headlines em fonte serif</strong> — Georgia, Lora ou Playfair Display.</p>
+      <div class="tdemo">
+        <div class="teye">Família · Negócios · Propósito</div>
+        <div class="th">Sua empresa cresceu.<br>Seu casamento <span>também?</span></div>
+        <div class="trule"></div>
+        <div class="tb2">A maioria das pessoas aprende a construir um negócio. Ninguém ensina a construir uma vida.</div>
+        <div class="ttag">Veja o episódio ↓</div>
+      </div>
+      <div class="note info" style="margin-top:.65rem"><strong>Por que serif:</strong> nenhum coach de negócios relevante no Brasil usa. Quando todo o mercado usa Impact e Bebas Neue, a serif se destaca no feed antes do conteúdo ser lido — e comunica profundidade, alguém que pensou antes de falar.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Sistema de cores — família orgânica de temperatura única</h3>
+    <p class="bt" style="margin-bottom:.75rem">Todas as seis cores vêm da mesma família de temperatura: madeira, couro, brasa, pergaminho. Como todas têm a mesma raiz quente, qualquer combinação dentro da paleta harmoniza visualmente de forma natural — sem precisar consultar uma tabela dizendo qual cor usar com qual.</p>
+    <div class="palette">
+      <div class="sww">
+        <div class="sw" style="background:#1F1A16;border:1px solid rgba(255,255,255,0.08)"></div>
+        <div class="swn">Tronco</div>
+        <div class="swh">#1F1A16</div>
+        <div class="swr">Fundo principal — posts, capas, thumbnails</div>
+      </div>
+      <div class="sww">
+        <div class="sw" style="background:#2E2420;border:1px solid rgba(255,255,255,0.06)"></div>
+        <div class="swn">Casca</div>
+        <div class="swh">#2E2420</div>
+        <div class="swr">Superfície secundária, blocos internos</div>
+      </div>
+      <div class="sww">
+        <div class="sw" style="background:#C4622A"></div>
+        <div class="swn">Brasa</div>
+        <div class="swh">#C4622A</div>
+        <div class="swr">Accent — destaque, CTA, linha separadora</div>
+      </div>
+      <div class="sww">
+        <div class="sw" style="background:#D97B3A"></div>
+        <div class="swn">Brasa+</div>
+        <div class="swh">#D97B3A</div>
+        <div class="swr">Variação para destaques secundários</div>
+      </div>
+      <div class="sww">
+        <div class="sw" style="background:#F0E6D3"></div>
+        <div class="swn">Pergaminho</div>
+        <div class="swh">#F0E6D3</div>
+        <div class="swr">Texto principal — nunca branco puro</div>
+      </div>
+      <div class="sww">
+        <div class="sw" style="background:#9E7A58"></div>
+        <div class="swn">Âmbar</div>
+        <div class="swh">#9E7A58</div>
+        <div class="swr">Texto secundário, metadados, eyebrows</div>
+      </div>
+    </div>
+    <div class="note warn"><strong>Por que terracota e não laranja puro:</strong> laranja vivo remete a urgência e promoção. O terracota queimado (#C4622A) mantém energia e calor sem soar "liquidação" — alinha com um posicionamento de autoridade madura e família.</div>
+  </div>
+
+  <div class="g2" style="margin-top:.75rem">
+    <div class="card">
+      <h3>O que usar</h3>
+      <div class="it teal" style="margin-top:0">
+        <div class="it-t">Blocos retangulares sólidos e linhas retas</div>
+        <div class="it-d">Geometria limpa que espelha a promessa — equilíbrio é possível.</div>
+      </div>
+      <div class="it teal">
+        <div class="it-t">Dois registros fotográficos complementares</div>
+        <div class="it-d">Estúdio com iluminação profissional para autoridade (feed). Câmera na mão, bastidores, família para conexão (stories e podcast).</div>
+      </div>
+      <div class="it teal">
+        <div class="it-t">Spark/estrela pontuda como assinatura</div>
+        <div class="it-d">Elemento gráfico mínimo que cria reconhecimento sem poluir o layout.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>O que banir</h3>
+      <div class="it red" style="margin-top:0">
+        <div class="it-t">Textos inclinados e caixas tortas</div>
+        <div class="it-d">Passam sensação de caos — contradizem diretamente a promessa do posicionamento.</div>
+      </div>
+      <div class="it red">
+        <div class="it-t">Fotos de banco de imagens</div>
+        <div class="it-d">Destroem autoridade em personal brand. Todo o conteúdo usa fotos reais do Júnior.</div>
+      </div>
+      <div class="it red">
+        <div class="it-t">Pinceladas rasgadas e gradiente neon</div>
+        <div class="it-d">Elementos que remetem ao padrão genérico de infoprodutor — o oposto do que queremos comunicar.</div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="foot">Instituto Propósito · Conceito e Posicionamento Digital · Maio 2026</div>
+</div>
